@@ -1,0 +1,47 @@
+.nav-tabs {
+    margin-top: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+}
+
+.nav-tabs > li {
+    padding: 15px 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 1px solid lightgray;
+    transition: .5s;
+}
+
+.nav-tabs > li::before {
+    font-size: .7;
+    color: lightcyan;
+    margin-right: 10px;
+    counter-increment: section;
+    content: "0 " counter(section);
+    font-size: .9em;
+}
+
+.nav-tabs > li:hover {
+    cursor: pointer;
+    background-color: #707B7C;
+    transition-duration: .5s;
+}
+
+.nav-tabs > li:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.nav-tabs > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-tabs {
+        width: 100%;
+    }
+}
